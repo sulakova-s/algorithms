@@ -10,10 +10,10 @@
     8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
 */
 // Solution 1: Mathematical approach
-const summationMath = n => n * (n + 1) / 2;
+const summationMath = (n) => (n * (n + 1)) / 2;
 
 // Solution 2: Iterative approach
-const summationLoop = n => {
+const summationLoop = (n) => {
   let sum = 0;
   for (let i = 1; i <= n; i++) sum += i;
   return sum;
@@ -24,7 +24,7 @@ console.log(summationMath(1)); // 1
 console.log(summationMath(2)); // 3
 console.log(summationMath(8)); // 36
 
-console.log(); 
+console.log();
 
 console.log(summationLoop(1)); // 1
 console.log(summationLoop(2)); // 3
