@@ -1,17 +1,40 @@
 /* 
-  In this kata you will create a function that takes a list of non-negative integers
-  and strings and returns a new list with the strings filtered out.
+  An isogram is a word that has no repeating letters, consecutive or non-consecutive. Implement a function that determines whether a string that contains only letters is an isogram. Assume the empty string is an isogram. Ignore letter case.
 
-  Example
-    filter_list([1,2,'a','b']) == [1,2]
-    filter_list([1,'a','b',0,15]) == [1,0,15]
-    filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+  Example:
+    "Dermatoglyphics" --> true
+    "aba" --> false
+    "moOse" --> false (ignore letter case)
 */
-function filter_list(list) {
-  return list.filter(item => typeof item === 'number');
+// Reduce solution
+function isIsogramReduce(str) {
+  return str
+    .toUpperCase()
+    .split("")
+    .sort()
+    .reduce((acc, current, index, array) => {
+      return acc && (index === 0 || current !== array[index - 1]);
+    }, true);
+}
+
+// Set solution
+function isIsogramSet(str) {
+  return new Set(str.toUpperCase()).size === str.length;
 }
 
 // Test cases
-console.log(filter_list([1,2,'a','b'])); // [1,2]
-console.log(filter_list([1,'a','b',0,15])); // [1,0,15]
-console.log(filter_list([1,2,'aasf','1','123',123])); // [1,2,123]
+console.log(isIsogramReduce("Dermatoglyphics")); // true
+console.log(isIsogramReduce("isogram")); // true
+console.log(isIsogramReduce("aba")); // false
+console.log(isIsogramReduce("moOse")); // false
+console.log(isIsogramReduce("isIsogram")); // false
+console.log(isIsogramReduce("")); // true
+
+console.log();
+
+console.log(isIsogramSet("Dermatoglyphics")); // true
+console.log(isIsogramSet("isogram")); // true
+console.log(isIsogramSet("aba")); // false
+console.log(isIsogramSet("moOse")); // false
+console.log(isIsogramSet("isIsogram")); // false
+console.log(isIsogramSet("")); // true
