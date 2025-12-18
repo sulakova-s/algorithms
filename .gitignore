@@ -1,21 +1,53 @@
-# Системные файлы MacOS
+# macOS system files
 .DS_Store
 
-# Папка зависимостей Node.js
+# Node.js dependencies
 node_modules/
 
-# Файлы окружения
+# Environment variables
 .env
 .env.local
 
-# Логи
+# Logs
 *.log
 npm-debug.log*
 
-# IDE файлы
+# IDE files
 .vscode/
 .idea/
 
-# Временные файлы
+# Temporary files
 *.tmp
 *.temp
+
+# ============ TypeScript and JavaScript ============
+
+# Compiled JavaScript files
+dist/
+build/
+*.js
+*.js.map
+
+# Exception for package.json 
+!package.json
+# Exception for configuration files
+!*.config.js
+
+# TypeScript compilation files
+*.tsbuildinfo
+
+# Coverage reports
+coverage/
+.nyc_output/
+
+# TypeScript declaration files (auto-generated)
+*.d.ts
+
+# Node.js package locks
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Optional output directories
+out/
+output/
