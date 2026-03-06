@@ -5,7 +5,7 @@ In mathematics, a square number or perfect square is an integer that is the squa
 of an integer; in other words, it is the product of some integer with itself.
 
 The tests will always use some integral number, so don't worry about that in dynamic
-typed languages.
+typed languages. 
 
   Examples:
   -1  =>  false
