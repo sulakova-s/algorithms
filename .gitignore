@@ -25,7 +25,6 @@ npm-debug.log*
 # Compiled JavaScript files
 dist/
 build/
-*.js
 *.js.map
 
 # Exception for package.json 
