@@ -25,6 +25,7 @@ function countBitsModulo(n) {
 
 // Uses bitwise AND to check the last bit
 // Right shift removes the checked bit
+// limited to 32-bit integers.
 function countBitsBitwise(n) {
   let count = 0;
   while (n > 0) {
