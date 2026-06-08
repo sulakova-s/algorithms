@@ -69,5 +69,3 @@ console.log();
 
 console.log("Object version:");
 test(duplicateEncodeObj);
-
-
