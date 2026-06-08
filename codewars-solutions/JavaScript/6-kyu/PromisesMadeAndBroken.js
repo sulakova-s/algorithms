@@ -1,7 +1,7 @@
 /*
   The Misadventures of Bob the Highly Paid Consultant
   Chapter 1: Promises Made and Broken
-  Your company has purchased a new ordering system and hired Bob the Highly Paid Consultant 
+  Your company has p a new ordering system and hired Bob the Highly Paid Consultant 
   to develop a front end. However, after continuous delays and missed deliverables, his contract 
   has now come to an end. Bob vanishes like a ghost into the fog, leaving you to see if you can
   salvage the pieces of his work.
