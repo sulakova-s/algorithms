@@ -24,8 +24,13 @@
  * @param {number} millis
  * @return {Promise}
  */
+// alternative solution
+// async function sleep(millis) {
+//   return new Promise((resolve) => setTimeout(resolve, millis));
+// }
+
 async function sleep(millis) {
-  return new Promise((resolve) => setTimeout(resolve, millis));
+  await new Promise((resolve) => setTimeout(resolve, millis));
 }
 
 let t = Date.now();
