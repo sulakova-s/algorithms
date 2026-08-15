@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "scripts": {
+    "benchmark": "node performance.js"
+  },
   "devDependencies": {
     "tinybench": "^2.9.0"
   }
