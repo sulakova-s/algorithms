@@ -39,6 +39,25 @@ var longestCommonPrefixVertical = function (strs) {
   return reference;
 };
 
+// Time complexity: O(N * M), N = strs.length, M = length of the shortest string.
+// Space complexity: O(M)
+/**
+ * @param {string[]} strs
+ * @return {string}
+ */
+var longestCommonPrefixHoriz = function (strs) {
+  let prefix = strs[0];
+
+  for (let i = 1; i < strs.length; i++) {
+    while (strs[i].indexOf(prefix) !== 0) {
+      prefix = prefix.slice(0, -1);
+      if (prefix === "") return prefix;
+    }
+  }
+
+  return prefix;
+};
+
 const testCases = [
   ["flower", "flow", "flight"],
   ["dog", "racecar", "car"],
@@ -48,3 +67,6 @@ const testCases = [
 ];
 
 testCases.forEach(arr => console.log(`[${arr}] → ${longestCommonPrefixVertical(arr)}`));
+console.log()
+testCases.forEach(arr => console.log(`[${arr}] → ${longestCommonPrefixHoriz(arr)}`));
+
